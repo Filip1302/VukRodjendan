@@ -595,9 +595,35 @@
   to { transform: rotate(360deg) scale(1); }
 }
 
+
+.scroll-hint {
+  position: absolute;
+  right: 16px;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  animation: pulseArrow 1.2s infinite;
+}
+.scroll-hint::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-right: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  transform: rotate(45deg);
+  margin: auto;
+}
+@keyframes pulseArrow {
+  0%, 100% { transform: translateY(-50%) translateY(0); opacity: 0.6; }
+  50% { transform: translateY(-50%) translateY(10px); opacity: 1; }
+}
+
 </style>
 </head>
 <body>
+<div class="scroll-hint" onclick="window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })"></div>>
   <div class="startOverlay" id="startOverlay">
     <div class="startBox">
       <h1>🔐 TAJNA MISIJA</h1>
