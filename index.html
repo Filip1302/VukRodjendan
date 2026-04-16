@@ -485,20 +485,49 @@
     }
 
     @media (max-width: 640px) {
-      .poster { min-height:1040px; border:none; }
-      .layout { grid-template-columns:1fr; min-height:760px; }
-      .right { padding:68px 14px 22px; }
+      .poster {
+        min-height:auto;
+        border:none;
+      }
+      .layout {
+        grid-template-columns:1fr;
+        min-height:auto;
+      }
+      .left {
+        min-height:540px;
+      }
+      .right {
+        padding:40px 14px 22px;
+      }
       .title { font-size:42px; }
       .sub { font-size:18px; }
       .vuk { font-size:24px; }
-      .detectiveWrap { right:26px; width:220px; height:310px; }
-      .door { right:12px; bottom:62px; width:118px; height:190px; }
+
+      /* top scene */
+      .detectiveWrap {
+        right:34px !important;
+        bottom:-6px !important;
+        width:255px !important;
+        height:360px !important;
+        z-index:3 !important;
+      }
+      .detectiveImg {
+        right:-4px !important;
+        bottom:6px !important;
+        width:104% !important;
+        height:104% !important;
+        object-fit:contain !important;
+        object-position:bottom right !important;
+      }
+
+      .door { right:12px; bottom:56px; width:118px; height:190px; }
       .doorTitle { font-size:24px; }
       .shelf { left:172px; width:112px; height:168px; }
-      .frame { left:132px; top:52px; }
+      .frame, .frame:after { display:none !important; }
       .wheel { width:64px; height:64px; top:152px; }
-      .table { width:120px; left:80px; bottom:80px; }
+      .table { width:120px; left:80px; bottom:76px; }
       .chair { display:none; }
+
       .digits { gap:8px; justify-content:space-between; }
       .digits input { width:22vw; max-width:58px; height:54px; font-size:26px; }
       .actions { flex-direction:column; }
@@ -506,6 +535,18 @@
       .revealBig { font-size:30px; }
       .revealTitle { font-size:28px; }
       .revealText { font-size:19px; min-height:150px; }
+
+      /* ending dancer on mobile: visible, but not covering card text */
+      .dance-celebration{
+        width:86px !important;
+        height:112px !important;
+        right:10px !important;
+        bottom:calc(18px + env(safe-area-inset-bottom)) !important;
+        z-index:998 !important;
+      }
+      .dance-photo img{
+        transform:scale(1.18) !important;
+      }
     }
   
     .detectiveWrap {
@@ -794,29 +835,6 @@
     height:220px !important;
     right:12px !important;
     bottom:calc(70px + env(safe-area-inset-bottom)) !important;
-  }
-}
-
-
-@media (max-width: 640px) {
-  .detectiveWrap {
-    right: 8px !important;
-    bottom: 6px !important;
-    width: 220px !important;
-    height: 300px !important;
-    z-index: 3 !important;
-  }
-  .detectiveImg {
-    right: -2px !important;
-    bottom: 2px !important;
-    width: 102% !important;
-    height: 102% !important;
-    object-fit: contain !important;
-    object-position: bottom right !important;
-  }
-  .frame,
-  .frame:after {
-    display: none !important;
   }
 }
 
