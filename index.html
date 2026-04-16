@@ -257,7 +257,7 @@
 
     .detectiveWrap {
       position:absolute;
-      right:170px;
+      right:220px;
       bottom:18px;
       width:320px;
       height:470px;
@@ -485,10 +485,11 @@
     }
 
     @media (max-width: 640px) {
-      /* extra push to hide yellow completely */
       .detectiveWrap {
-        right:48px !important;
-        bottom:-12px !important;
+        right:120px !important;
+        bottom:-10px !important;
+        width:240px !important;
+        height:340px !important;
       }
       .poster {
         min-height:auto;
@@ -611,6 +612,12 @@
       100% { transform:translate(-50%,-50%) scale(1.2); opacity:0; }
     }
     @media (max-width: 640px) {
+      .detectiveWrap {
+        right:120px !important;
+        bottom:-10px !important;
+        width:240px !important;
+        height:340px !important;
+      }
       .detectiveWrap {
         margin-left:-150px;
         width:300px !important;
@@ -844,19 +851,16 @@
 }
 
 
-.vuk-end-mobile{
+.vuk-inside{
   width:100%;
   display:flex;
   justify-content:center;
   margin-top:12px;
 }
-.vuk-end-mobile img{
-  width:160px;
+.vuk-inside img{
+  width:180px;
   height:auto;
-  animation:bob 2.6s ease-in-out infinite;
-}
-@media (min-width: 641px){
-  .vuk-end-mobile{ display:none; }
+  animation:bob 2.4s ease-in-out infinite;
 }
 
 </style>
