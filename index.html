@@ -485,6 +485,11 @@
     }
 
     @media (max-width: 640px) {
+      /* extra push to hide yellow completely */
+      .detectiveWrap {
+        right:48px !important;
+        bottom:-12px !important;
+      }
       .poster {
         min-height:auto;
         border:none;
@@ -836,6 +841,22 @@
     right:12px !important;
     bottom:calc(70px + env(safe-area-inset-bottom)) !important;
   }
+}
+
+
+.vuk-end-mobile{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin-top:12px;
+}
+.vuk-end-mobile img{
+  width:160px;
+  height:auto;
+  animation:bob 2.6s ease-in-out infinite;
+}
+@media (min-width: 641px){
+  .vuk-end-mobile{ display:none; }
 }
 
 </style>
